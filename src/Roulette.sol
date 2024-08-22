@@ -33,7 +33,7 @@ contract Roulette is
 
     uint256 public constant REQUIRED_FUNDS_COEFFICIENT = 20;
     uint256 private immutable created;
-    uint64 private immutable subscriptionId;
+    uint256 private immutable subscriptionId;
     address public immutable vrfCoordinator;
     bytes32 public immutable keyHash;
     uint32 private constant callbackGasLimit = 2_500_000;
@@ -73,7 +73,7 @@ contract Roulette is
     );
 
     constructor(
-        uint64 _subscriptionId,
+        uint256 _subscriptionId,
         address _core,
         address _staking,
         address _vrfCoordinator,
